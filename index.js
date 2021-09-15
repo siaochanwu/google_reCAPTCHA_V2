@@ -1,4 +1,4 @@
-function verify() {
+function verify(token) {
     var formData = new FormData();
     formData.append('token', token);
         
