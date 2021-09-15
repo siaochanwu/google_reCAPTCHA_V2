@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        .hide {
+            background: red;
+        }
+        input {
+            background: green;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    
     <div
         class="g-recaptcha"
         data-sitekey="6LdNZ2ccAAAAABkP0psFZ47zqlUSjkFRlYgIuEuM"
@@ -16,7 +27,7 @@
     >
     </div>
     <br/>
-    <input type="submit" value="Submit">
+    <input class="hide" id="verify" type="submit" value="verify yet">
 </body>
 <script src="./index.js"></script>
 </html>
