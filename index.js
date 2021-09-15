@@ -1,18 +1,16 @@
 function verify(token) {
+    console.log('123')
     // 把 token 送到後端
     // var formData = new FormData();
     // formData.append('token', token);
         
     // Google Apps Script 部署為網路應用程式後取得的 URL
-    var uriGAS = "https://script.google.com/macros/s/AKfycbxJOgOXrxs08GlO3vNxCE69BC2zjtmWeAjlOfGp7HqSWezkzbp80mis8UmLCBkqR-gA/exec";
+    var uriGAS = `https://script.google.com/macros/s/AKfycbxJOgOXrxs08GlO3vNxCE69BC2zjtmWeAjlOfGp7HqSWezkzbp80mis8UmLCBkqR-gA/exec?token=${token}`;
         
     fetch(uriGAS, {
         redirect: "follow",
-        method: "POST",
+        method: "GET",
         followAllRedirects: true,
-        body: {
-            token
-        },
     }).then(response => response.json())
         .then(result => {
         if(result.success) {
