@@ -1,4 +1,5 @@
 function verify(token) {
+    // 把 token 送到後端
     var formData = new FormData();
     formData.append('token', token);
         
@@ -8,10 +9,10 @@ function verify(token) {
     fetch(uriGAS, {
         method: "POST",
         body: formData
-    })
-        .then(response => response.json())
+    }).then(response => response.json())
         .then(result => {
         if(result.success) {
+            console.log('ok')
             const submit = document.getElementById('verify')
             submit.classList.remove('hide');
             submit.textContent = 'verify ok';
@@ -22,4 +23,12 @@ function verify(token) {
         .catch(err => {
             window.alert(err)
         })
+}
+
+function expired(expired) {
+    window.alert('驗證過期')
+}
+
+function error(error) {
+    window.alert('驗證錯誤QQ')
 }
