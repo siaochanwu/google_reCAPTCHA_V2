@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback" async defer></script>
 
     <style>
         .hide {
@@ -20,7 +21,7 @@
     </style>
 </head>
 <body>
-    <form action="?" method="POST">
+    <form method="POST">
         <div
         class="g-recaptcha"
         data-sitekey="6LdNZ2ccAAAAABkP0psFZ47zqlUSjkFRlYgIuEuM"
@@ -32,7 +33,6 @@
         <br/>
         <input class="hide" id="verify" type="submit" value="verify yet">
     </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
