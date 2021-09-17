@@ -19,9 +19,9 @@ function verify(token) {
         .then(result => {
         if(result.success) {
             console.log('ok')
+            document.querySelector('input').value = 'verify ok';
             const submit = document.getElementById('verify')
             submit.classList.remove('hide');
-            submit.textContent = 'verify ok';
         } else {
             window.alert(result['error-codes'][0])
         }
