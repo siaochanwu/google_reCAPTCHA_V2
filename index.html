@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <style>
         .hide {
             background: red;
@@ -20,16 +20,19 @@
     </style>
 </head>
 <body>
-    <div
+    <form action="?" method="POST">
+        <div
         class="g-recaptcha"
         data-sitekey="6LdNZ2ccAAAAABkP0psFZ47zqlUSjkFRlYgIuEuM"
         data-callback="verify"
         data-expired-callback="expired"
         data-error-callback="error"
-    >
-    </div>
-    <br/>
-    <input class="hide" id="verify" type="submit" value="verify yet">
+        >
+        </div>
+        <br/>
+        <input class="hide" id="verify" type="submit" value="verify yet">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript" src="./index.js"></script>
 </body>
-<script src="./index.js"></script>
 </html>
